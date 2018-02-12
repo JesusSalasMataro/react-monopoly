@@ -1,0 +1,23 @@
+.bigSquare {
+	width: 100px;
+	height: 100px;	
+	float: left;
+}
+
+.smallHorizontalSquare {
+	width: 100px;
+	height: 50px;
+	float: left;	
+}
+
+.smallVerticalSquare {
+	width: 50px;
+	height: 100px;
+	float: left;	
+}
+
+.emptyLine {
+	width: 400px;
+	height: 50px;
+	float: left;
+}
