@@ -1,23 +1,96 @@
 .bigSquare {
 	width: 100px;
-	height: 100px;	
-	float: left;
+	height: 100px;		
+	background-color: #eef2f3;
 }
 
 .smallHorizontalSquare {
 	width: 100px;
-	height: 50px;
-	float: left;	
+	height: 50px;	
+	background-color: #eef2f3;
 }
 
 .smallVerticalSquare {
 	width: 50px;
-	height: 100px;
-	float: left;	
+	height: 100px;	
+	background-color: #eef2f3;
 }
 
-.emptyLine {
-	width: 400px;
-	height: 50px;
+.upperSquareContent {
+	width: 100%;
+	height: 70%;
+}
+
+.upperSquareHeader {
+	width: 100%;
+	height: 30%;	
+}
+
+.downSquareContent {
+	width: 100%;
+	height: 70%;
+}
+
+.downSquareHeader {
+	width: 100%;
+	height: 30%;	
+}
+
+.leftSquareContent {
+	width: 70%;
+	height: 100%;
+}
+
+.leftSquareHeader {
+	width: 30%;
+	height: 100%;
+	float: right;
+}
+
+.rightSquareContent {
+	width: 70%;
+	height: 100%;
+}
+
+.rightSquareHeader {
+	width: 30%;
+	height: 100%;
 	float: left;
 }
+
+.streetGroupOne {
+	background-color: gray;
+}
+
+.streetGroupTwo {
+	background-color: violet;
+}
+
+.streetGroupThree {
+	background-color: brown;
+}
+
+.streetGroupFour {
+	background-color: orange;
+}
+
+.streetGroupFive {
+	background-color: red;
+}
+
+.streetGroupSix {
+	background-color: yellow;
+}
+
+.streetGroupSeven {
+	background-color: green;
+}
+
+.streetGroupEight {
+	background-color: blue;
+}
+
+
+
+
+
