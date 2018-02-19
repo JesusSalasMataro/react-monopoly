@@ -1,0 +1,9 @@
+.ficha {
+	float: left;
+	margin-left: 100px;
+}
+
+.colorFicha {
+	width: 20px;
+	height: 20px;	
+}

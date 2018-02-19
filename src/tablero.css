@@ -1,7 +1,12 @@
+.tablero {
+	float: left;
+}
+
 .bigSquare {
 	width: 100px;
 	height: 100px;		
 	background-color: #eef2f3;
+	text-align: center;
 }
 
 .smallHorizontalSquare {
@@ -88,6 +93,10 @@
 
 .streetGroupEight {
 	background-color: blue;
+}
+
+.texto {
+	font-family: 'Arial';
 }
 
 
