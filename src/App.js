@@ -1,29 +1,33 @@
 import React from 'react';
-import Tablero from './tablero.js';
-import Ficha from './ficha.js';
+import Board from './board.js';
+import Card from './card.js';
 
 class App extends React.Component {
 	
 	constructor() {
 		super();
-		this.actualizarFicha = this.actualizarFicha.bind(this);
+		this.updateCard = this.updateCard.bind(this);
 		this.state = {
-			colorFicha: 'white'		
+			cardColor: 'white',
+			streetName: ''
 		};
 	}
 
   	render() {
+		const {cardColor, streetName} = this.state;  		
+  		
     	return (
     		<div>
-    				<Tablero actualizarFicha={this.actualizarFicha} />
-    				<Ficha colorFicha={this.state.colorFicha} />
+    				<Board updateCard={this.updateCard} />
+    				<Card cardColor={cardColor} streetName={streetName} />
     		</div>      
     	);
   	}
   
-  	actualizarFicha(colorFicha) {
+  	updateCard(cardColor, streetName) {  		
   		this.setState({
-  			colorFicha: colorFicha
+  			cardColor: cardColor,
+  			streetName: streetName
   		});	
   	}
 }
