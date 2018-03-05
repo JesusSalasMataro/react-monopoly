@@ -37,7 +37,7 @@ class Square extends React.Component {
 		
 		if (size === 'big') {
 			square =					
-				<span>{name}</span>												
+				<span className="textSquare">{name}</span>												
 		}
 		else {
 			if (position === 'up') {

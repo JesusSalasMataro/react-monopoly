@@ -1,5 +1,6 @@
 .board {
 	float: left;
+	font-family: sans-serif;
 }
 
 .divSquare {
@@ -7,11 +8,15 @@
 	width:100%;
 }
 
+.textSquare {
+	margin: 2px;
+}
+
 .bigSquare {
 	width: 100px;
 	height: 100px;		
 	background-color: #eef2f3;
-	text-align: center;
+	text-align: center;	
 }
 
 .small-vertical {
