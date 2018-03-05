@@ -1,6 +1,7 @@
 import React from 'react';
 import './board.css';
 import Square from './square.js';
+import imgMonopoly from './images/monopoly.jpg';
 
 
 class Board extends React.Component {
@@ -31,76 +32,118 @@ class Board extends React.Component {
 		return (					
 			<table>
 				<tbody>
-					<tr> 			
-						<Square name="Parking" order={20} position="up" color="white" size="big" updateCard={this.updateCard} />
-						<Square order={21} position="up" color="red" size="small" updateCard={this.updateCard} />
-						<Square order={22} position="up" color="red" size="small" updateCard={this.updateCard} />
-						<Square order={23} position="up" color="white" size="small" updateCard={this.updateCard} />
-						<Square order={24} position="up" color="red" size="small" updateCard={this.updateCard} />
-						<Square order={25} position="up" color="white" size="small" updateCard={this.updateCard} />
-						<Square order={26} position="up" color="yellow" size="small" updateCard={this.updateCard} />
-						<Square order={27} position="up" color="yellow" size="small" updateCard={this.updateCard} />
-						<Square order={28} position="up" color="white" size="small" updateCard={this.updateCard} />
-						<Square order={29} position="up" color="yellow" size="small" updateCard={this.updateCard} />
-						<Square name="Ir a la cárcel" order={30} position="up" color="white" size="big" updateCard={this.updateCard} />												
+					<tr>
+						<td colspan="11">
+							<table>
+								<tbody>
+									<tr>			
+										<Square name="Parking" order={20} position="up" color="white" size="big" updateCard={this.updateCard} />
+										<Square order={21} position="up" color="red" size="small" updateCard={this.updateCard} />
+										<Square order={22} position="up" color="red" size="small" updateCard={this.updateCard} />
+										<Square order={23} position="up" color="white" size="small" updateCard={this.updateCard} />
+										<Square order={24} position="up" color="red" size="small" updateCard={this.updateCard} />
+										<Square order={25} position="up" color="white" size="small" updateCard={this.updateCard} />
+										<Square order={26} position="up" color="yellow" size="small" updateCard={this.updateCard} />
+										<Square order={27} position="up" color="yellow" size="small" updateCard={this.updateCard} />
+										<Square order={28} position="up" color="white" size="small" updateCard={this.updateCard} />
+										<Square order={29} position="up" color="yellow" size="small" updateCard={this.updateCard} />
+										<Square name="Ir a la cárcel" order={30} position="up" color="white" size="big" updateCard={this.updateCard} />
+									</tr>
+								</tbody>
+							</table>			
+						</td>									
 					</tr>
 					<tr>
-						<Square order={19} position="left" color="orange" size="small" updateCard={this.updateCard} />						
-						<td key="empty-line-1" id="empty-line-1" colSpan="9"></td>
-						<Square order={31} position="right" color="green" size="small" updateCard={this.updateCard} />						
-					</tr>				
-					<tr> 			
-						<Square order={18} position="left" color="white" size="small" updateCard={this.updateCard} />						
-						<td key="empty-line-2" id="empty-line-2" colSpan="9"></td>
-						<Square order={32} position="right" color="white" size="small" updateCard={this.updateCard} />						
-					</tr>				
-					<tr> 			
-						<Square order={17} position="left" color="orange" size="small" updateCard={this.updateCard} />						
-						<td key="empty-line-3" id="empty-line-3" colSpan="9"></td>
-						<Square order={33} position="right" color="green" size="small" updateCard={this.updateCard} />
-					</tr>				
-					<tr> 			
-						<Square order={16} position="left" color="orange" size="small" updateCard={this.updateCard} />
-						<td key="empty-line-4" id="empty-line-4" colSpan="9"></td>
-						<Square order={34} position="right" color="green" size="small" updateCard={this.updateCard} />
-					</tr>				
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<Square order={19} position="left" color="orange" size="small" updateCard={this.updateCard} />										
+									</tr>
+									<tr>
+										<Square order={18} position="left" color="white" size="small" updateCard={this.updateCard} />													
+									</tr>
+									<tr>
+										<Square order={17} position="left" color="orange" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={16} position="left" color="orange" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={15} position="left" color="white" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={14} position="left" color="brown" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={13} position="left" color="brown" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={12} position="left" color="white" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={11} position="left" color="brown" size="small" updateCard={this.updateCard} />
+									</tr>																																																																																									
+								</tbody>
+							</table>						
+						</td>
+						<td colspan="9" className="boardCenter">
+							<img src={imgMonopoly} alt=""/>
+						</td>
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<Square order={31} position="right" color="green" size="small" updateCard={this.updateCard} />										
+									</tr>
+									<tr>
+										<Square order={32} position="right" color="white" size="small" updateCard={this.updateCard} />													
+									</tr>
+									<tr>
+										<Square order={33} position="right" color="green" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={34} position="right" color="green" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={35} position="right" color="white" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={36} position="right" color="blue" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={37} position="right" color="blue" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={38} position="right" color="white" size="small" updateCard={this.updateCard} />
+									</tr>
+									<tr>
+										<Square order={39} position="right" color="blue" size="small" updateCard={this.updateCard} />
+									</tr>									
+								</tbody>
+							</table>						
+						</td>
+					</tr>		
 					<tr>
-						<Square order={15} position="left" color="white" size="small" updateCard={this.updateCard} /> 									
-						<td key="empty-line-5" id="empty-line-5" colSpan="9"></td>
-						<Square order={35} position="right" color="white" size="small" updateCard={this.updateCard} />
-					</tr>				 			
-					<tr>
-						<Square order={14} position="left" color="brown" size="small" updateCard={this.updateCard} />
-						<td key="empty-line-6" id="empty-line-6" colSpan="9"></td>
-						<Square order={36} position="right" color="blue" size="small" updateCard={this.updateCard} />
-					</tr>				
-					<tr> 
-						<Square order={13} position="left" color="brown" size="small" updateCard={this.updateCard} />
-						<td key="empty-line-7" id="empty-line-7" colSpan="9"></td>
-						<Square order={37} position="right" color="blue" size="small" updateCard={this.updateCard} />
-					</tr>				
-					<tr> 			
-						<Square order={12} position="left" color="white" size="small" updateCard={this.updateCard} />
-						<td key="empty-line-8" id="empty-line-8" colSpan="9"></td>
-						<Square order={38} position="right" color="white" size="small" updateCard={this.updateCard} />
-					</tr>				
-					<tr> 			
-						<Square order={11} position="left" color="brown" size="small" updateCard={this.updateCard} />
-						<td key="empty-line-8" id="empty-line-9" colSpan="9"></td>
-						<Square order={39} position="right" color="blue" size="small" updateCard={this.updateCard} />
-					</tr>				
-					<tr>
-						<Square name="Cárcel" order={10} position="down" color="white" size="big" updateCard={this.updateCard} />						
-						<Square order={9} position="down" color="violet" size="small" updateCard={this.updateCard} />
-						<Square order={8} position="down" color="violet" size="small" updateCard={this.updateCard} />
-						<Square order={7} position="down" color="white" size="small" updateCard={this.updateCard} />
-						<Square order={6} position="down" color="violet" size="small" updateCard={this.updateCard} />
-						<Square order={5} position="down" color="white" size="small" updateCard={this.updateCard} />
-						<Square order={4} position="down" color="gray" size="small" updateCard={this.updateCard} />
-						<Square order={3} position="down" color="white" size="small" updateCard={this.updateCard} />
-						<Square order={2} position="down" color="gray" size="small" updateCard={this.updateCard} />
-						<Square order={1} position="down" color="gray" size="small" updateCard={this.updateCard} />
-						<Square name="Salida" order={0} position="down" color="white" size="big" updateCard={this.updateCard} />
+						<td colspan="11">
+							<table>
+								<tbody>
+									<tr>			
+										<Square name="Cárcel" order={10} position="down" color="white" size="big" updateCard={this.updateCard} />						
+										<Square order={9} position="down" color="violet" size="small" updateCard={this.updateCard} />
+										<Square order={8} position="down" color="violet" size="small" updateCard={this.updateCard} />
+										<Square order={7} position="down" color="white" size="small" updateCard={this.updateCard} />
+										<Square order={6} position="down" color="violet" size="small" updateCard={this.updateCard} />
+										<Square order={5} position="down" color="white" size="small" updateCard={this.updateCard} />
+										<Square order={4} position="down" color="gray" size="small" updateCard={this.updateCard} />
+										<Square order={3} position="down" color="white" size="small" updateCard={this.updateCard} />
+										<Square order={2} position="down" color="gray" size="small" updateCard={this.updateCard} />
+										<Square order={1} position="down" color="gray" size="small" updateCard={this.updateCard} />
+										<Square name="Salida" order={0} position="down" color="white" size="big" updateCard={this.updateCard} />
+									</tr>
+								</tbody>
+							</table>			
+						</td>						
 					</tr>
 				</tbody>																														
 			</table>

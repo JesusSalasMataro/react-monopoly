@@ -1,6 +1,16 @@
 .board {
 	float: left;
 	font-family: sans-serif;
+	border: 3px #cbc8c8 solid;
+}
+
+.boardCenter {
+	width: 474px;
+	text-align: center;
+}
+
+.boardCenter > img {
+	border: 0;
 }
 
 .divSquare {
