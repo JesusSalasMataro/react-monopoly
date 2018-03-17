@@ -22,13 +22,11 @@ class Square extends React.Component {
 			order: this.props.order,
 			name: this.props.name
 		};
-		
-		this.updateCard = this.updateCard.bind(this);
 	}
 	
-	updateCard(squareNumber) {
+	updateCard = (squareNumber) => {
 		this.props.updateCard(squareNumber);
-	}
+	};
 	
 	render() {
 		const {position, orientation, positionContentClass, positionHeaderClass, size, colorStreetClass, key, order, name} 

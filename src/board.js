@@ -7,7 +7,6 @@ import imgMonopoly from './images/monopoly.jpg';
 class Board extends React.Component {
 	constructor(props) {
 		super(props);
-		this.updateCard = this.updateCard.bind(this);
 		this.state = {
 			squares: this.loadSquares()			
 		};
@@ -23,17 +22,17 @@ class Board extends React.Component {
 		);
 	}
 	
-	updateCard(squareNumber) {			
+	updateCard = (squareNumber) => {			
 		const square = this.state.squares.find(s => s.order === squareNumber);
 		this.props.updateCard(square.color, square.name);
 	}
 	
 	drawBoard() {
 		return (					
-			<table>
+			<table id="tableBoard">
 				<tbody>
 					<tr>
-						<td colspan="11">
+						<td colSpan="11">
 							<table>
 								<tbody>
 									<tr>			
@@ -87,8 +86,8 @@ class Board extends React.Component {
 								</tbody>
 							</table>						
 						</td>
-						<td colspan="9" className="boardCenter">
-							<img src={imgMonopoly} alt=""/>
+						<td colSpan="9" className="boardCenter">
+							<img src={imgMonopoly} alt="" id="boardCentralImage"/>
 						</td>
 						<td>
 							<table>
@@ -125,7 +124,7 @@ class Board extends React.Component {
 						</td>
 					</tr>		
 					<tr>
-						<td colspan="11">
+						<td colSpan="11">
 							<table>
 								<tbody>
 									<tr>			

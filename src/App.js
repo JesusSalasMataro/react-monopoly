@@ -1,13 +1,11 @@
 import React from 'react';
 import Board from './board.js';
-import Card from './card.js';
-import Dices from './dices.js';
+import GameController from './gameController.js';
 
 class App extends React.Component {
 	
 	constructor() {
 		super();
-		this.updateCard = this.updateCard.bind(this);
 		this.state = {
 			cardColor: 'white',
 			streetName: ''
@@ -20,13 +18,12 @@ class App extends React.Component {
     	return (
     		<div>
     				<Board updateCard={this.updateCard} />
-    				<Card cardColor={cardColor} streetName={streetName} />
-    				<Dices />
-    		</div>      
+					<GameController cardColor={cardColor} streetName={streetName} />
+    		</div>      		    
     	);
   	}
   
-  	updateCard(cardColor, streetName) {  		
+  	updateCard = (cardColor, streetName) => {  		
   		this.setState({
   			cardColor: cardColor,
   			streetName: streetName
