@@ -8,25 +8,27 @@ class App extends React.Component {
 		super();
 		this.state = {
 			cardColor: 'white',
-			streetName: ''
+			streetName: '',
+			price: 0
 		};
 	}
 
   	render() {
-		const {cardColor, streetName} = this.state;  		
+		const {cardColor, streetName, price} = this.state;  		
   		
     	return (
     		<div>
     				<Board updateCard={this.updateCard} />
-					<GameController cardColor={cardColor} streetName={streetName} />
+					<GameController cardColor={cardColor} streetName={streetName} price={price} />
     		</div>      		    
     	);
   	}
   
-  	updateCard = (cardColor, streetName) => {  		
+  	updateCard = (cardColor, streetName, price) => {  		
   		this.setState({
   			cardColor: cardColor,
-  			streetName: streetName
+			  streetName: streetName,
+			  price: price
   		});	
   	}
 }

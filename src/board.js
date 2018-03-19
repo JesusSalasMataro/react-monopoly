@@ -24,7 +24,7 @@ class Board extends React.Component {
 	
 	updateCard = (squareNumber) => {			
 		const square = this.state.squares.find(s => s.order === squareNumber);
-		this.props.updateCard(square.color, square.name);
+		this.props.updateCard(square.color, square.name, square.price);
 	}
 	
 	drawBoard() {
@@ -156,280 +156,320 @@ class Board extends React.Component {
 				position: 'bottom',
 				size: 'big',
 				order: 0,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{
 				name: 'Calle de Poniente',
 				position: 'bottom',
 				size: 'small',
 				order: 1,
-				color: 'gray'
+				color: 'gray',
+				price: 6000
 			},			
 			{
 				name: 'Calle de Ferrer Bassa',
 				position: 'bottom',
 				size: 'small',
 				order: 2,
-				color: 'gray'
+				color: 'gray',
+				price: 8000
 			},
 			{
 				name: 'Suerte',
 				position: 'bottom',
 				size: 'small',
 				order: 3,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{
 				name: 'Calle del Gregal',
 				position: 'bottom',
 				size: 'small',
 				order: 4,
-				color: 'gray'
+				color: 'gray',
+				price: 10000
 			},
 			{
 				name: 'Central de Autobuses',
 				position: 'bottom',
 				size: 'small',
 				order: 5,
-				color: 'white'
+				color: 'white',
+				price: 50000
 			},
 			{
 				name: 'Calle Tánger',
 				position: 'bottom',
 				size: 'small',
 				order: 6,
-				color: 'violet'
+				color: 'violet',
+				price: 14000
 			},
 			{
 				name: 'Impuestos',
 				position: 'bottom',
 				size: 'small',
 				order: 7,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{
 				name: 'Calle Badajoz',
 				position: 'bottom',
 				size: 'small',
 				order: 8,
-				color: 'violet'
+				color: 'violet',
+				price: 16000
 			},
 			{
 				name: 'Calle Bolivia',
 				position: 'bottom',
 				size: 'small',
 				order: 9,
-				color: 'violet'
+				color: 'violet',
+				price: 20000
 			},
 			{
 				name: 'Cárcel',
 				position: 'bottom',
 				size: 'big',
 				order: 10,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{
 				name: 'Calle Sicilia',
 				position: 'left',
 				size: 'small',
 				order: 11,
-				color: 'brown'
+				color: 'brown',
+				price: 26000
 			},
 			{
 				name: 'Suerte',
 				position: 'left',
 				size: 'small',
 				order: 12,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{
 				name: 'Calle Nápoles',
 				position: 'left',
 				size: 'small',
 				order: 13,
-				color: 'brown'
+				color: 'brown',
+				price: 30000
 			},
 			{
 				name: 'Calle Casp',
 				position: 'left',
 				size: 'small',
 				order: 14,
-				color: 'brown'
+				color: 'brown',
+				price: 34000
 			},
 			{
 				name: 'Metro de Barcelona',
 				position: 'left',
 				size: 'small',
 				order: 15,
-				color: 'white'
+				color: 'white',
+				price: 50000
 			},
 			{
 				name: 'Travesera de les Corts',
 				position: 'left',
 				size: 'small',
 				order: 16,
-				color: 'orange'
+				color: 'orange',
+				price: 40000
 			},
 			{
 				name: 'Avenida Josep Tarradelles',
 				position: 'left',
 				size: 'small',
 				order: 17,
-				color: 'orange'
+				color: 'orange',
+				price: 44000
 			},
 			{
 				name: 'Impuestos',
 				position: 'left',
 				size: 'small',
 				order: 18,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{
 				name: 'Calle Berlín',
 				position: 'left',
 				size: 'small',
 				order: 19,
-				color: 'orange'
+				color: 'orange',
+				price: 48000
 			},
 			{			
 				name: 'Parking',
 				position: 'up',
 				size: 'big',
 				order: 20,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{			
 				name: 'Calle Numancia',
 				position: 'up',
 				size: 'small',
 				order: 21,
-				color: 'red'
+				color: 'red',
+				price: 56000
 			},
 			{			
 				name: 'Calle Córcega',
 				position: 'up',
 				size: 'small',
 				order: 22,
-				color: 'red'
+				color: 'red',
+				price: 60000
 			},
 			{			
 				name: 'Suerte',
 				position: 'up',
 				size: 'small',
 				order: 23,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{			
 				name: 'Calle Aribau',
 				position: 'up',
 				size: 'small',
 				order: 24,
-				color: 'red'
+				color: 'red',
+				price: 64000
 			},
 			{			
 				name: 'Puerto de Barcelona',
 				position: 'up',
 				size: 'small',
 				order: 25,
-				color: 'white'
+				color: 'white',
+				price: 50000
 			},
 			{			
 				name: 'Calle Consejo de Ciento',
 				position: 'up',
 				size: 'small',
 				order: 26,
-				color: 'yellow'
+				color: 'yellow',
+				price: 74000
 			},
 			{			
 				name: 'Calle Diputación',
 				position: 'up',
 				size: 'small',
 				order: 27,
-				color: 'yellow'
+				color: 'yellow',
+				price: 78000
 			},
 			{			
 				name: 'Impuestos',
 				position: 'up',
 				size: 'small',
 				order: 28,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{			
 				name: 'Calle Aragón',
 				position: 'up',
 				size: 'small',
 				order: 29,
-				color: 'yellow'
+				color: 'yellow',
+				price: 84000
 			},
 			{			
 				name: 'Ir a la cárcel',
 				position: 'up',
 				size: 'big',
 				order: 30,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{			
 				name: 'Avenida de Pedralbes',
 				position: 'right',
 				size: 'small',
 				order: 31,
-				color: 'green'
+				color: 'green',
+				price: 96000
 			},
 			{			
 				name: 'Suerte',
 				position: 'right',
 				size: 'small',
 				order: 32,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{			
 				name: 'Paseo de la Bonanova',
 				position: 'right',
 				size: 'small',
 				order: 33,
-				color: 'green'
+				color: 'green',
+				price: 104000
 			},
 			{			
 				name: 'Vía Augusta',
 				position: 'right',
 				size: 'small',
 				order: 34,
-				color: 'green'
+				color: 'green',
+				price: 112000
 			},
 			{			
 				name: 'Aeropuerto',
 				position: 'right',
 				size: 'small',
 				order: 35,
-				color: 'white'
+				color: 'white',
+				price: 50000
 			},
 			{			
 				name: 'Las Ramblas',
 				position: 'right',
 				size: 'small',
 				order: 36,
-				color: 'blue'
+				color: 'blue',
+				price: 0
 			},
 			{			
 				name: 'Gran Vía',
 				position: 'right',
 				size: 'small',
 				order: 37,
-				color: 'blue'
+				color: 'blue',
+				price: 124000
 			},
 			{			
 				name: 'Impuestos',
 				position: 'right',
 				size: 'small',
 				order: 38,
-				color: 'white'
+				color: 'white',
+				price: 0
 			},
 			{			
 				name: 'Paseo de Gracia',
 				position: 'right',
 				size: 'small',
 				order: 39,
-				color: 'blue'
+				color: 'blue',
+				price: 130000
 			}
 		];
 	}

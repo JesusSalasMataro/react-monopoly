@@ -24,8 +24,8 @@ class Dices extends React.Component {
 	}
 
 	changeDices() {
-		const dice1 = Math.floor((Math.random() * 6) + 1);
-		const dice2 = Math.floor((Math.random() * 6) + 1);
+		const dice1 = Math.floor(Math.random() * 6) + 1;
+		const dice2 = Math.floor(Math.random() * 6) + 1;
 		this.setState({
 			dice1: dice1,
 			dice2: dice2,
@@ -85,9 +85,8 @@ class Dices extends React.Component {
 		return (
 			<div id="containerDices">
 				<input type="button" value="Tirar dados" onClick={this.rollDices}/>
-				<div>
-					<span style={{fontSize: 90}}>{codeDice1} {codeDice2}</span>
-				</div>
+				<br/>
+				<span style={{fontSize: 90}}>{codeDice1}{codeDice2}</span>
 			</div>
 		);
 	}

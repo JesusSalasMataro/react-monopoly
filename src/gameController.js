@@ -8,7 +8,8 @@ class GameController extends React.Component {
     render() {
         return (
             <div id="containerGameController">
-                <Card cardColor={this.props.cardColor} streetName={this.props.streetName} />
+                <Card cardColor={this.props.cardColor} streetName={this.props.streetName} 
+                    price={this.props.price}/>
                 <Dices />
             </div>
         );
