@@ -1,48 +1,43 @@
-import React from 'react';
-import './card.css';
-import imgSuerte from './images/suerte.jpg';
-import imgImpuestos from './images/impuestos.jpg';
-import imgInfraestructuras from './images/infraestructuras.jpg';
-import imgSalida from './images/salida.jpg';
-import imgCarcel from './images/carcel.jpg';
-import imgParking from './images/parking.jpg';
-import imgIrCarcel from './images/ir_carcel.jpg';
+import React from 'react'
+import './card.css'
+import imgSuerte from './images/suerte.jpg'
+import imgImpuestos from './images/impuestos.jpg'
+import imgInfraestructuras from './images/infraestructuras.jpg'
+import imgSalida from './images/salida.jpg'
+import imgCarcel from './images/carcel.jpg'
+import imgParking from './images/parking.jpg'
+import imgIrCarcel from './images/ir_carcel.jpg'
 
 class Card extends React.Component {
 	
 	render() {
-		let imageName;
-		let price = '';
+		let imageName
 		
 		if (this.props.streetName === 'Suerte') {
-			imageName = imgSuerte;		
+			imageName = imgSuerte		
 		}
 		else if (this.props.streetName === 'Impuestos') {
-			imageName = imgImpuestos;		
+			imageName = imgImpuestos		
 		}
 		else if (this.props.streetName.startsWith('Metro') ||
 					this.props.streetName.startsWith('Aeropuerto') ||
 					this.props.streetName.startsWith('Central')	||
 					this.props.streetName.startsWith('Puerto')) {
-			imageName = imgInfraestructuras;
+			imageName = imgInfraestructuras
 		}
 		else if (this.props.streetName === 'Salida') {
-			imageName = imgSalida;		
+			imageName = imgSalida	
 		}
 		else if (this.props.streetName === 'Cárcel') {
-			imageName = imgCarcel;
+			imageName = imgCarcel
 		}
 		else if (this.props.streetName === 'Parking') {
-			imageName = imgParking;		
+			imageName = imgParking	
 		}
 		else if (this.props.streetName === 'Ir a la cárcel') {
-			imageName = imgIrCarcel;		
+			imageName = imgIrCarcel		
 		}
 
-		if (this.props.price !== 0) {
-			price = 'Precio: ' + this.props.price;
-		}
-		
 		return (
 			<div id="card">
 				<div><h4>Ficha</h4></div>
@@ -50,7 +45,15 @@ class Card extends React.Component {
 				<div className="cardName"><span>{this.props.streetName}</span></div>
 				<br/>
 				<br/>
-				<div><span>{price}</span></div>
+				<div>
+					<span>
+					{
+						this.props.price !== 0
+							? 'Precio: ' + this.props.price
+							: ''
+					}
+					</span>
+				</div>
 				<br/>
 				<div>
 					<img src={imageName} alt="" id="cardImage"/>				
@@ -60,4 +63,4 @@ class Card extends React.Component {
 	}
 }
 
-export default Card;
+export default Card

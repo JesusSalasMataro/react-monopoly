@@ -1,14 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 class Square extends React.Component {
 
 	constructor(props) {
-		super(props);
-		
-		this.orientation = 'horizontal';
+		super(props)
+		this.orientation = 'horizontal'
 		
 		if (this.props.position === 'up' || this.props.position === 'down') {
-			this.orientation = 'vertical';		
+			this.orientation = 'vertical'		
 		}		
 		
 		this.state = {		
@@ -21,17 +20,17 @@ class Square extends React.Component {
 			key: "square-" + this.props.order,
 			order: this.props.order,
 			name: this.props.name
-		};
+		}
 	}
 	
 	updateCard = (squareNumber) => {
-		this.props.updateCard(squareNumber);
-	};
+		this.props.updateCard(squareNumber)
+	}
 	
 	render() {
 		const {position, orientation, positionContentClass, positionHeaderClass, size, colorStreetClass, key, order, name} 
-			= this.state;
-		let square = null;		
+			= this.state
+		let square = null		
 		
 		if (size === 'big') {
 			square =					
@@ -54,10 +53,10 @@ class Square extends React.Component {
 			}		
 		}			
 		
-		let classSquareName = 'bigSquare';
+		let classSquareName = 'bigSquare'
 		
 		if (size !== 'big') {
-			classSquareName = size + "-" + orientation;
+			classSquareName = size + "-" + orientation
 		}
 		
 		return (
@@ -70,4 +69,4 @@ class Square extends React.Component {
 	}
 }
 
-export default Square;
+export default Square

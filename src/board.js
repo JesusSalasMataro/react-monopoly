@@ -1,15 +1,13 @@
-import React from 'react';
-import './board.css';
-import Square from './square.js';
-import imgMonopoly from './images/monopoly.jpg';
+import React from 'react'
+import './board.css'
+import Square from './square.js'
+import imgMonopoly from './images/monopoly.jpg'
 
 
 class Board extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			squares: this.loadSquares()			
-		};
+
+	state = {
+		squares: this.loadSquares()			
 	}
 	
 	render() {
@@ -19,12 +17,12 @@ class Board extends React.Component {
 				this.drawBoard()
 			}			
 			</div>
-		);
+		)
 	}
 	
 	updateCard = (squareNumber) => {			
-		const square = this.state.squares.find(s => s.order === squareNumber);
-		this.props.updateCard(square.color, square.name, square.price);
+		const square = this.state.squares.find(s => s.order === squareNumber)
+		this.props.updateCard(square.color, square.name, square.price)
 	}
 	
 	drawBoard() {
@@ -471,8 +469,8 @@ class Board extends React.Component {
 				color: 'blue',
 				price: 130000
 			}
-		];
+		]
 	}
 }
 
-export default Board;
+export default Board
