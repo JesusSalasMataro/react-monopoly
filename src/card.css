@@ -16,6 +16,10 @@
 	float: left;
 }
 
-#cardImage {
+.cardImage {
 	width: 70px;
+}
+
+.containerCardImage {
+    text-align: center;
 }

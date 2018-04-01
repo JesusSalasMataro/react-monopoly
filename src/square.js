@@ -4,12 +4,11 @@ class Square extends React.Component {
 
 	constructor(props) {
 		super(props);
-		
-		this.orientation = 'horizontal';
-		
-		if (this.props.position === 'up' || this.props.position === 'down') {
-			this.orientation = 'vertical';		
-		}		
+        
+        this.orientation = 
+            this.props.position === 'up' || this.props.position === 'down'
+                ? 'vertical'
+                : 'horizontal'	
 		
 		this.state = {		
 			position: this.props.position,	
@@ -29,8 +28,10 @@ class Square extends React.Component {
 	};
 	
 	render() {
-		const {position, orientation, positionContentClass, positionHeaderClass, size, colorStreetClass, key, order, name} 
-			= this.state;
+        const {position, orientation, positionContentClass, positionHeaderClass, size, 
+            colorStreetClass, key, order, name} 
+            = this.state;
+            
 		let square = null;		
 		
 		if (size === 'big') {
@@ -38,32 +39,27 @@ class Square extends React.Component {
 				<span className="textSquare">{name}</span>												
 		}
 		else {
-			if (position === 'up') {
-				square =
-						<div className="divSquare">
-							<div className={positionContentClass}></div>			
-							<div className={[positionHeaderClass, colorStreetClass].join(' ')}></div>					
-						</div>			 	
-			}
-			else {
-				square =
-						<div className="divSquare">			
-							<div className={[positionHeaderClass, colorStreetClass].join(' ')}></div>
-							<div className={positionContentClass}></div>
-						</div>	
-			}		
+            square =
+                position === 'up'
+                    ?   <div className="divSquare">
+                            <div className={positionContentClass}></div>			
+                            <div className={[positionHeaderClass, colorStreetClass].join(' ')}></div>					
+                        </div>
+
+                    :   <div className="divSquare">			
+                            <div className={[positionHeaderClass, colorStreetClass].join(' ')}></div>
+                            <div className={positionContentClass}></div>
+                        </div>	
 		}			
-		
-		let classSquareName = 'bigSquare';
-		
-		if (size !== 'big') {
-			classSquareName = size + "-" + orientation;
-		}
+        
+        const classSquareName =
+            size === 'big'
+                ? 'bigSquare'
+                : size + "-" + orientation
 		
 		return (
 			<td key={key} id={key} className={classSquareName}
-				onMouseEnter={() => this.updateCard(order)}>
-				
+				onMouseEnter={() => this.updateCard(order)}>				
 				{square}
 			</td>
 		);

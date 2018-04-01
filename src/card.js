@@ -12,7 +12,6 @@ class Card extends React.Component {
 	
 	render() {
 		let imageName;
-		let price = '';
 		
 		if (this.props.streetName === 'Suerte') {
 			imageName = imgSuerte;		
@@ -39,9 +38,10 @@ class Card extends React.Component {
 			imageName = imgIrCarcel;		
 		}
 
-		if (this.props.price !== 0) {
-			price = 'Precio: ' + this.props.price;
-		}
+        const price =
+            this.props.price === 0
+                ? ''
+                : 'Precio: ' + this.props.price;
 		
 		return (
 			<div id="card">
@@ -52,8 +52,8 @@ class Card extends React.Component {
 				<br/>
 				<div><span>{price}</span></div>
 				<br/>
-				<div>
-					<img src={imageName} alt="" id="cardImage"/>				
+				<div className="containerCardImage">
+					<img src={imageName} alt={this.props.streetName} className="cardImage"/>				
 				</div>
 			</div>
 		);
