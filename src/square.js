@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 class Square extends React.Component {
 
@@ -20,12 +20,12 @@ class Square extends React.Component {
 			key: "square-" + this.props.order,
 			order: this.props.order,
 			name: this.props.name
-		};
+		}
 	}
 	
 	updateCard = (squareNumber) => {
-		this.props.updateCard(squareNumber);
-	};
+		this.props.updateCard(squareNumber)
+	}
 	
 	render() {
         const {position, orientation, positionContentClass, positionHeaderClass, size, 
@@ -66,4 +66,4 @@ class Square extends React.Component {
 	}
 }
 
-export default Square;
+export default Square

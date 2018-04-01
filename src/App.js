@@ -4,31 +4,28 @@ import GameController from './gameController.js';
 
 class App extends React.Component {
 	
-	constructor() {
-		super();
-		this.state = {
-			cardColor: 'white',
-			streetName: '',
-			price: 0
-		};
-	}
+	state = {
+		cardColor: 'white',
+		streetName: '',
+		price: 0
+	};
 
   	render() {
 		const {cardColor, streetName, price} = this.state;  		
   		
-    	return (
-    		<div>
-    				<Board updateCard={this.updateCard} />
-					<GameController cardColor={cardColor} streetName={streetName} price={price} />
-    		</div>      		    
-    	);
+		return (
+			<div>
+				<Board updateCard={this.updateCard} />
+				<GameController cardColor={cardColor} streetName={streetName} price={price} />
+			</div>      		    
+		);
   	}
   
   	updateCard = (cardColor, streetName, price) => {  		
   		this.setState({
   			cardColor: cardColor,
-			  streetName: streetName,
-			  price: price
+			streetName: streetName,
+			price: price
   		});	
   	}
 }
