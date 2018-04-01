@@ -37,11 +37,6 @@ class Card extends React.Component {
 		else if (this.props.streetName === 'Ir a la cárcel') {
 			imageName = imgIrCarcel		
 		}
-
-        const price =
-            this.props.price === 0
-                ? ''
-                : 'Precio: ' + this.props.price;
 		
 		return (
 			<div id="card">
@@ -53,9 +48,9 @@ class Card extends React.Component {
 				<div>
 					<span>
 					{
-						this.props.price !== 0
-							? 'Precio: ' + this.props.price
-							: ''
+						this.props.price === 0
+							? ''
+							: 'Precio: ' + this.props.price
 					}
 					</span>
 				</div>

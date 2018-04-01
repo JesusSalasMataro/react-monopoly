@@ -3,7 +3,7 @@ import React from 'react'
 class Square extends React.Component {
 
 	constructor(props) {
-		super(props);
+		super(props)
         
         this.orientation = 
             this.props.position === 'up' || this.props.position === 'down'
@@ -30,9 +30,9 @@ class Square extends React.Component {
 	render() {
         const {position, orientation, positionContentClass, positionHeaderClass, size, 
             colorStreetClass, key, order, name} 
-            = this.state;
+            = this.state
             
-		let square = null;		
+		let square = null
 		
 		if (size === 'big') {
 			square =					
